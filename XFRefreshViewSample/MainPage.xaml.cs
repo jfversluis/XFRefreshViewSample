@@ -14,5 +14,11 @@ namespace XFRefreshViewSample
         {
             InitializeComponent();
         }
+
+        async void RefreshView_Refreshing(System.Object sender, System.EventArgs e)
+        {
+            await Task.Delay(3000);
+            myRefreshView.IsRefreshing = false;
+        }
     }
 }
